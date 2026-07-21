@@ -1,0 +1,59 @@
+@import "theme.css";
+
+window#waybar {
+    background-color: @bar-bg;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#workspaces {
+    background-color: @main-bg;
+    padding: 0px 10px;
+    margin: 4px 0px;
+    border-radius: 12px;
+    border: 1px solid @main-fg;
+}
+
+#workspaces button {
+    padding: 0px 6px;
+    margin: 4px 0px;
+    font-size: 12px;
+    color: @accent-dim;
+    background-color: transparent;
+    border: none;
+    transition: all 0.2s linear;
+}
+
+
+#workspaces button.active {
+    color: @wb-act-fg;
+    background-color: @wb-act-bg;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 8px;
+}
+
+#memory, #custom-vram, #disk, #window, #custom-media,
+#battery, #pulseaudio, #network, #clock, #tray {
+    background-color: @main-bg;
+    color: @main-fg;
+    margin: 4px 4px;
+    padding: 4px 16px;
+    border-radius: 12px;
+    border: 1px solid @main-fg;
+}
+
+#window {
+    color: @text-white;
+    background-color: @window-bg;
+}
+
+#tray > .needs-attention {
+    background-color: @alert-red;
+}
+
+#battery.critical:not(.charging) {
+    background-color: @alert-red;
+    color: @text-white;
+}

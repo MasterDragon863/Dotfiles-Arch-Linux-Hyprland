@@ -1,0 +1,64 @@
+{
+    "memory": {
+        "interval": 10,
+        "format": "󰍛    RAM {used:0.1f}G/{total:0.1f}G ({percentage}%)",
+        "tooltip": false
+    },
+"custom/vram": {
+        "exec": "nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk '{printf \"󰢮   VRAM %.1fG/%.1fG\\n\", $1/1024, $2/1024}'",
+        "interval": 10,
+        "tooltip": false
+    },
+    "disk": {
+        "interval": 30,
+        "format": "󰋊    Disk {percentage_used}%",
+        "path": "/"
+    },
+    "hyprland/window": {
+        "format": "󰖲    {title}",
+        "max-length": 20,
+        "separate-outputs": true
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "●",
+        "format-icons": {
+            "active": "",
+            "default": "",
+            "urgent": ""
+        }
+    },
+
+    "battery": {
+        "states": { "warning": 30, "critical": 15 },
+        "format": "{icon}   {capacity}%",
+        "format-charging": "   {capacity}%",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "pulseaudio": {
+        "format": "{icon}   {volume}%",
+        "format-muted": "󰝟 Muted",
+        "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
+        "on-click": "pavucontrol" 
+    },
+    "network": {
+        "format-wifi": "   {essid}",
+        "format-ethernet": "󰈀   Wired",
+        "format-disconnected": "󰖪   Disconnected"
+    },
+    "clock": {
+        "format": "    {:%H:%M}"
+    },
+    "custom/media": {
+        "format": "{text}",
+        "return-type": "json",
+        "max-length": 20,
+        "escape": false,
+        "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" ,
+        "on-click": "playerctl play-pause",
+        "on-scroll-down": "playerctl next",
+        "on-scroll-up": "playerctl previous",
+    }
+}

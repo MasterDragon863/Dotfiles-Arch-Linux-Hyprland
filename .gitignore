@@ -1,0 +1,16 @@
+/*
+
+!.gitignore
+
+!Kvantum/
+!LICENSE
+!README.md
+!fastfetch/
+!hypr/
+!kitty/
+!nvim/
+!starship.toml
+!systemd/
+!tmuxinator/
+!waybar/
+!wlogout/
