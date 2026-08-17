@@ -52,3 +52,16 @@ hl.window_rule({
 	match = { class = "game" },
 	float = true,
 })
+
+hl.window_rule({
+	name = "floating-vulkan-game-windows",
+	match = { class = "vk_app" },
+	float = true,
+})
+hl.window_rule({
+	name = "Float opengl window",
+	match = { title = "Learn OpenGL" },
+	float = true,
+})
+
+

@@ -106,11 +106,14 @@ do
       filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda', 'prot' },
 
       init_options = {
-        fallbackFlags = { '-std=c++17' },
+        fallbackFlags = { '-std=c99' },
       },
     },
     asm_lsp = {
       filetypes = { 'asm', 's', 'S' },
+    },
+    jdtls = {
+      filetypes = {"java"},
     },
     -- gopls = {},
     pyright = {},
@@ -123,6 +126,7 @@ do
     -- ts_ls = {},
 
     stylua = {}, -- Used to format Lua code
+    roslyn = {},
 
     -- Special Lua Config, as recommended by neovim help docs
     lua_ls = {
@@ -175,10 +179,16 @@ do
     gh 'WhoIsSethDaniel/mason-tool-installer.nvim',
     gh 'mfussenegger/nvim-lint',
     gh 'Civitasv/cmake-tools.nvim',
+    gh 'seblyng/roslyn.nvim',
   }
 
   -- Automatically install LSPs and related tools to stdpath for Neovim
-  require('mason').setup {}
+  require('mason').setup {
+    registries = {
+      'github:mason-org/mason-registry',
+      'github:Crashdummyy/mason-registry',
+    },
+  }
 
   -- Ensure the servers and tools above are installed
   --
@@ -214,4 +224,3 @@ do
     cmake_build_directory = 'build',
   }
 end
-
