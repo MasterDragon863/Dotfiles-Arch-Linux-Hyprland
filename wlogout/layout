@@ -1,27 +1,27 @@
 {
     "label": "lock",
     "action": "lockscreen.sh",
-    "text": "Lock",
+    "text": "",
     "keybind": "l"
 }
 
 {
     "label": "logout",
     "action": "command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'",
-    "text": "Logout",
-    "keybind": "e"
+    "text": "",
+    "keybind": "o"
 }
 
 {
     "label": "shutdown",
     "action": "systemctl poweroff",
-    "text": "Shutdown",
+    "text": "",
     "keybind": "s"
 }
 
 {
     "label": "reboot",
     "action": "systemctl reboot",
-    "text": "Reboot",
+    "text": "",
     "keybind": "r"
 }

@@ -76,9 +76,9 @@ do
   -- See `:help 'confirm'`
   vim.o.confirm = true
   vim.opt.smarttab = true
-  vim.opt.tabstop = 2
-  vim.opt.shiftwidth = 2
-  vim.opt.expandtab = true
+  vim.opt.tabstop = 8
+  vim.opt.shiftwidth = 8
+  vim.opt.expandtab = false
 
   vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
     pattern = '*.inc',

@@ -103,7 +103,13 @@ do
   ---@type table<string, vim.lsp.Config>
   local servers = {
     clangd = {
-      filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda', 'prot' },
+      cmd = {
+        'clangd',
+        '--clang-tidy',
+        '--fallback-style=none',
+        '--background-index',
+      },
+      filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda', 'proto' },
 
       init_options = {
         fallbackFlags = { '-std=c99' },
@@ -113,7 +119,7 @@ do
       filetypes = { 'asm', 's', 'S' },
     },
     jdtls = {
-      filetypes = {"java"},
+      filetypes = { 'java' },
     },
     -- gopls = {},
     pyright = {},

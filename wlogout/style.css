@@ -42,19 +42,19 @@ button:hover {
     border: 2px solid #ff6600;
 }
 button:hover#lock {
-    border-radius: 40px 40px 0px 40px;
+    border-radius: 40px 0px 0px 0px;
 }
 
 button:hover#logout {
-    border-radius: 40px 0px 40px 40px;
+    border-radius: 0px 0px 0px 40px;
 }
 
 button:hover#shutdown {
-    border-radius: 40px 40px 40px 0px;
+    border-radius: 0px 40px 0px 0px;
 }
 
 button:hover#reboot {
-    border-radius: 0px 40px 40px 40px;
+    border-radius: 0px 0px 40px 0px;
 }
 
 #lock {
